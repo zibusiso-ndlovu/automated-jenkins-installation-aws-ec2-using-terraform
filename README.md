@@ -1,0 +1,11 @@
+# AUTOMATED JENKINS SERVER INSTALLATION USING TERRAFORM, ANSIBLE AND BASH ON AWS EC2
+
+## Prerequisites
+
+AWS Acoount
+Terraform
+AWS CLI
+Ansible
+
+## 
+
