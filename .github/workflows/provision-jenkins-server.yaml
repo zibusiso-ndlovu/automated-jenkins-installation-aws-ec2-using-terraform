@@ -1,0 +1,43 @@
+name: "Jenkins Server Provisioning"
+on: 
+    push:
+        branches:
+        - main
+    pull_request:
+        branches:
+        - main
+   
+jobs:
+    provision-jenkins-server:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Checkout"
+              uses: actions/checkout@v2
+            - name: "Provision Jenkins Server"
+              uses: jenkinsinfraprovisioning/jenkins-server-provisioning@main
+              with:
+                jenkins_admin_username: ${{ secrets.JENKINS_ADMIN_USERNAME }}
+                jenkins_admin_password: ${{ secrets.JENKINS_ADMIN_PASSWORD }}
+                jenkins_admin_email: ${{ secrets.JENKINS_ADMIN_EMAIL }}
+                jenkins_admin_fullname: ${{ secrets.JENKINS_ADMIN_FULLNAME }}
+                jenkins_server_hostname: ${{ secrets.JENKINS_SERVER_HOSTNAME }}
+                jenkins_server_port: ${{ secrets.JENKINS_SERVER_PORT }}
+                jenkins_server_protocol: ${{ secrets.JENKINS_SERVER_PROTOCOL }}
+                jenkins_server_image: ${{ secrets.JENKINS_SERVER_IMAGE }}
+                jenkins_server_instance_type: ${{ secrets.JENKINS_SERVER_INSTANCE_TYPE }}
+                jenkins_server_region: ${{ secrets.JENKINS_SERVER_REGION }}
+                jenkins_server_key_name: ${{ secrets.JENKINS_SERVER_KEY_NAME }}
+                jenkins_server_security_group: ${{ secrets.JENKINS_SERVER_SECURITY_GROUP }}
+                jenkins_server_subnet_id: ${{ secrets.JENKINS_SERVER_SUBNET_ID }}
+                jenkins_server_vpc_id: ${{ secrets.JENKINS_SERVER_VPC_ID }}
+                jenkins_server_volume_size: ${{ secrets.JENKINS_SERVER_VOLUME_SIZE }}
+                jenkins_server_volume_type: ${{ secrets.JENKINS_SERVER_VOLUME_TYPE }}
+                jenkins_server_volume_device: ${{ secrets.JENKINS_SERVER_VOLUME_DEVICE }}
+                jenkins_server_volume_mount: ${{ secrets.JENKINS_SERVER_VOLUME_MOUNT }}
+                jenkins_server_volume_fstype: ${{ secrets.JENKINS_SERVER_VOLUME_FSTYPE }}
+                jenkins_server_volume_options: ${{ secrets.JENKINS_SERVER_VOLUME_OPTIONS }}
+                jenkins_server_volume_label: ${{ secrets.JENKINS_SERVER_VOLUME_LABEL }}
+                jenkins_server_volume_format: ${{ secrets.JENKINS_SERVER_VOLUME_FORMAT }}
+                jenkins_server_volume_state: ${{ secrets.JENKINS_SERVER_VOLUME_STATE }}
+                jenkins_server_volume_action: ${{ secrets.JENKINS_SERVER_VOLUME_ACTION }}
+                jenkins_server_volume_device_path: ${{ secrets

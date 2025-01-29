@@ -1,0 +1,69 @@
+# Local Terraform directories
+**/.terraform/
+**/*.terraform*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude .tfvars files (sensitive variable definitions)
+*.tfvars
+*.tfvars.json
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration
+.terraformrc
+terraform.rc
+
+# Lock file (optional - some teams commit this)
+.terraform.lock.hcl
+
+# Local provider/plugin cache
+**/.terraform/providers/
+**/.terraform/modules/
+
+# Terragrunt files (if using)
+.terragrunt-cache/
+terragrunt.state
+
+# Environment files
+.env
+.envrc
+.venv/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build artifacts
+*.zip
+*.tar.gz
+bin/
