@@ -40,3 +40,4 @@ if [ -f /var/lib/jenkins/secrets/initialAdminPassword ]; then
 else
     echo "Failed to locate the initial admin password. Please check the Jenkins service."
 fi
+rg
